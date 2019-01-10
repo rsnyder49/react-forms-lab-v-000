@@ -4,7 +4,20 @@ class LoginForm extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      username: " ", 
+      password: " "
+    };
+  }
+
+   handlesLogInForm= (event) => {
+    this.setState({
+      username: event.target.value,
+      password: event.target.value
+    })
+  }
+  handleSubmit = event => {
+    event.preventDefault()
   }
 
   render() {
